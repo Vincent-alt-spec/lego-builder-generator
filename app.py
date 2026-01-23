@@ -47,9 +47,18 @@ if set_number:
         st.error("Could not load set data.")
     else:
         st.success(f"Total parts: {inventory['total_parts']}")
+        st.subheader("🎨 LEGO Color Breakdown")
 
-        size = st.selectbox("Choose build size:", ["small", "medium", "large"])
-        build_type = st.text_input("Choose build type (vehicle, robot, structure, etc.):")
+for color, qty in sorted(
+    inventory["by_color"].items(),
+    key=lambda x: x[1],
+    reverse=True
+):
+    st.write(f"🟦 {color}: {qty}")
+
+
+    size = st.selectbox("Choose build size:", ["small", "medium", "large"])
+    build_type = st.text_input("Choose build type (vehicle, robot, structure, etc.):")
 
 st.markdown("<br>", unsafe_allow_html=True)
 if st.button("🚀 Generate Build"):
