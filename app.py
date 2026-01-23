@@ -36,6 +36,10 @@ st.markdown("""
 st.markdown("## 🧱 LEGO Alternate Build Generator")
 st.markdown("Turn your LEGO set into a new custom build using AI.")
 st.info("🔎 Want to see how the parts look? Visit BrickLink and search your set number to see clear images of every piece and color.")
+st.warning(
+        "This build is a conceptual guide. Some connections may require creative adjustment, "
+        "as the AI cannot fully simulate LEGO physics."
+    )
 
 
 
@@ -72,10 +76,6 @@ if st.button("🚀 Generate Build"):
     st.subheader("Build Instructions")
     st.text(build)
 
-    st.warning(
-        "This build is a conceptual guide. Some connections may require creative adjustment, "
-        "as the AI cannot fully simulate LEGO physics."
-    )
 
     guidance = Legobuilder.generate_ai_guidance(
         build, inventory, Legobuilder.extract_constraints(inventory)
