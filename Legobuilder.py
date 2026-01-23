@@ -108,6 +108,15 @@ def choose_best_build(scores):
 # AI BUILD DESIGN
 # =========================
 def generate_build_description(build_type, selected_parts, size):
+
+    # --- PART COUNT TARGET ---
+    if size == "small":
+        min_parts = 30
+    elif size == "medium":
+        min_parts = 250
+    else:
+        min_parts = 500
+
     headers = {
         "Authorization": f"Bearer {OPENAI_API_KEY}",
         "Content-Type": "application/json"
@@ -141,10 +150,13 @@ you must write exactly:
 "Slope 30 1x2 (Dark Bluish Gray)"
 
 
-TARGET PART USAGE:
-SMALL: ~30–200 parts  
-MEDIUM: ~250–400 parts  
-LARGE: ~500–800+ parts  
+REQUIRED PART USAGE RULES:
+- You MUST use at least {min_parts} total parts
+- You MUST distribute usage across many different parts
+- You MUST list exact quantities for every section
+- The build should use most of the available parts
+- If you cannot reach {min_parts} parts, explain why clearly
+  
 
 If the set does not support this size, explain why and suggest a better build type.
 
@@ -158,6 +170,16 @@ FORMAT:
 - Each section:
   - Parts Required
   - Instructions
+
+  FINAL REQUIREMENT:
+At the end, include a section titled exactly:
+
+"PART USAGE SUMMARY"
+
+This section must include:
+- Total number of parts used
+- A short explanation of how the total was reached
+
 
 Start now.
 """
