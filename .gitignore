@@ -1,0 +1,9 @@
+# Ignore generated build images
+quit_structure*.png
+*structure*.png
+
+# Python cache
+__pycache__/
+*.pyc
+# Generated images / AI outputs
+*.png
