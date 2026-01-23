@@ -171,14 +171,6 @@ FORMAT:
   - Parts Required
   - Instructions
 
-  FINAL REQUIREMENT:
-At the end, include a section titled exactly:
-
-"PART USAGE SUMMARY"
-
-This section must include:
-- Total number of parts used
-- A short explanation of how the total was reached
 
 
 Start now.
