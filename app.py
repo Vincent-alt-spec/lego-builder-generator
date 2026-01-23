@@ -35,6 +35,8 @@ st.markdown("""
 
 st.markdown("## 🧱 LEGO Alternate Build Generator")
 st.markdown("Turn your LEGO set into a new custom build using AI.")
+st.info("🔎 Want to see how the parts look? Visit BrickLink and search your set number to see clear images of every piece and color.")
+
 
 
 set_number = st.text_input("Enter LEGO set number:")
@@ -83,4 +85,4 @@ if st.button("🚀 Generate Build"):
     for g in guidance:
         st.write(g)
 
-    st.info("Go to BrickLink and search your set number to see clear images of every piece and color.")
+
