@@ -34,12 +34,12 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 st.markdown("## 🧱 LEGO Alternate Build Generator")
-st.markdown("Turn your LEGO set into a new custom build using AI.")
+st.markdown("Turn your LEGO set into a new custom alternate build using your existing parts.")
 st.info("🔎 Want to see how the parts look? Visit BrickLink and search your set number to see clear images of every piece and color.")
 st.warning(
-        "This build is a conceptual guide. Some connections may require creative adjustment, "
-        "as the AI cannot fully simulate LEGO physics."
-    )
+"This build is a conceptual guide. Some connections may require creative adjustment."
+)
+
 
 
 
