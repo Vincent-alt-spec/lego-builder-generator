@@ -1,7 +1,7 @@
-# LEGO Alternate Build Generator 🧱
+# LEGO Alternate Build Generator 🧱 
 
 Turn any LEGO set into a custom alternate build using AI.
-
+Live demo: https://lego-builder-generator.streamlit.app/
 ## What it does
 - Fetches real parts from Rebrickable  
 - Selects usable parts based on build size  
